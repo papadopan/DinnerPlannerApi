@@ -1,0 +1,592 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Raleway;
+}
+html, body {
+  height: 100vh;
+  font-size: 16px;
+}
+header {
+  background-color: lightgray;
+height: 10vh;
+  text-align: center;
+
+}
+header h1 {
+  font-size: 4em;
+  letter-spacing: 1px;
+  font-family: Raleway;
+}
+svg{
+  background: inherit;
+}
+.display_inline{
+  display: inline-block;
+}
+#btn{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  right:  0px;
+  top:1px;
+  display: none;
+}
+
+path{
+  transition: stroke-dashoffset 0.5s ease-in-out,
+  stroke-dasharray 0.5s ease-in-out;
+  stroke-width: 50px;
+  stroke-linecap:round;
+  stroke: black;
+}
+path#top , path#bottom {
+  stroke-dasharray: 240px 910px;
+}
+path#middle{
+  stroke-dasharray: 240px 2000px;
+}
+.cross path#top , .cross path#bottom{
+  stroke-dashoffset: -650px;
+}
+.cross path#middle{
+  stroke-dashoffset: -650px;
+  /*stroke-dasharray: 1px 220px;*/
+}
+/********************************************/
+/*id for the first screen*/
+#loader{
+  display: flex;
+  min-height: 0vh;
+  position: static;
+  display: none;
+  background: rgba(229, 231, 222, 0.5);
+  z-index: 9999999999999;
+}
+#loader_img{
+  margin: auto;
+  width: 200px;
+  height: 150px;
+  border: 1px solid black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 999999;
+}
+#index{
+  display: block
+}
+#sidebar{
+  display: none;
+
+}
+#menu{
+  display: none;
+
+}
+#plan{
+  display: none;
+
+}
+#final_description{
+  display: none;
+
+}
+
+/*********************************************/
+#indexview{
+  display: flex;
+  min-height: 90vh;
+  background-color: white;
+}
+.description {
+  margin: auto;
+  max-width: 50%;
+  text-align: center;
+
+}
+.description p {
+  margin-bottom: 100px;
+  font-size: 1.2em;
+    font-family: Raleway;
+}
+
+.deliver{
+  font-size: 1.2em;
+  font-family: Raleway;
+  color: black;
+  border-radius: 0px;
+  width: 200px;
+  height: 50px;
+  border-radius: 0px;
+  background: #f6b16b;
+}
+.deliver:hover{
+box-shadow: 2px 2px 20px #222;
+
+}
+
+/*****************************************************/
+/*********************selectdish*********************/
+/*****************************************************/
+.order{
+  background: purple;
+  height: 86vh;
+  position: relative;
+}
+
+.order_details , .ready_dish{
+  margin-top: 30px;
+  width: 100%;
+  background-color: lightgrey;
+  height: 50px;
+  border: 1px solid black;
+  position: relative;
+  font-size: 1.2em;
+}
+.order_dishes{
+  margin-top: 5px;
+  width: 95%;
+  background-color: lightgrey;
+  height: 50px;
+  margin-left: 15px;
+  border: 1px solid black;
+  position: relative;
+  font-size: .9em;
+}
+.ready_dish{
+  margin-top: 10px;
+  width: 90%;
+  height: 50px;
+  border: 1px solid black;
+
+}
+.order_details span , .order_dishes span{
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  font-family: Raleway;
+  font-size: .8em;
+
+}
+.order_details span:first-child , .order_dishes span:first-child{
+  position: absolute;
+  left: 5px;
+}
+.price_list{
+  font-family: Raleway;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: black;
+  font-weight: 400;
+  position: absolute;
+  right: 30px;
+
+}
+.ready_wrapper{
+  margin-left: 30px;
+}
+.confirm{
+  border: 1px solid black;
+  width: 90%;
+  height: 50px;
+  text-align: center;
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form{
+  background: lightblue;
+  height: 15vh;
+}
+.find_dish{
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.dishes{
+  background: green;
+  height: 71vh;
+}
+/************/
+.flex_container{
+  display: flex;
+  flex-flow: row;
+}
+.side{
+  flex:1;
+  order: 1;
+  background: red;
+  min-height:90vh;
+  position: relative;
+}
+.nside{
+  flex:3;
+  order: 2;
+  background-color: green;
+  min-height: 10vh;
+  display:flex;
+  flex-flow: column;
+}
+.lis{
+  flex: 1 auto;
+  order: 1;
+  background-color: lightblue;
+  height: 20vh;
+
+}
+.numberList{
+  font-size: 1.2em;
+  text-shadow: 1px 1px 1px #222;
+}
+.dinner{
+  margin-left: 10px;
+  font-size: 1.2em;
+  font-family: Raleway;
+  position: relative;
+}
+.dinner button{
+  background-color: inherit;
+  border: 0;
+  margin-right: 5px;
+}
+.dinner button:hover{
+  box-shadow: 0 0 20px #808080;
+}
+
+.dinner span{
+  margin-right: 10px;
+
+}
+.drop{
+  width: 200px;
+  text-align: left;
+  height: 35px;
+  background: white;
+  padding-left: 10px;
+}
+.drop1{
+  width: 30px;
+  text-align: center;
+  height: 35px;
+  background-color: white;
+}
+.order_form{
+  margin-left: 40px;
+  margin-top: 40px;
+}
+.order_form h3{
+  margin-bottom: 30px;
+}
+.info{
+  flex: 5 auto ;
+  order: 2;
+  background-color: yellow;
+  height: 70vh;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+#info #welcome_text{
+  margin: auto;
+  display: block;
+}
+#info #empty_search{
+  margin: auto;
+  display: none;
+}
+.info > div {
+  background-color: #f1f1f1;
+  width: 220px;
+  height: 220px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  font-size: 30px;
+  position: relative;
+}
+.info img {
+  height: 100%;
+  width: 100%;
+}
+.brief{
+  font-size: 0.5em;
+  background-color: rgba(118, 189, 213, 0.6);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+/*****************************************************/
+/*********************overview************************/
+/*****************************************************/
+.short_intro{
+  display: flex;
+  flex-flow: row;
+}
+.short_info{
+  flex:1;
+  order: 1;
+  background: red;
+  min-height:15vh;
+  position: relative;
+  border: 1px solid black;
+}
+.short_info p{
+  position: absolute;
+  left: 20px;
+  top: 6vh;
+  font-size: 1.5em;
+  font-weight: bolder;
+
+}
+.short_info button{
+  position: absolute;
+  right: 10px;
+  top: 6vh;
+}
+.dish_list{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+}
+.dish_list > div {
+  background-color: white;
+  width: 250px;
+  height: 250px;
+  margin-top: 50px;
+  margin-left: 10px;
+  text-align: center;
+  font-size: 30px;
+  position: relative;
+}
+.dish_list  img
+{
+  height: 100%;
+  width: 100%;
+}
+.vl{
+  border-left: 2px solid black;
+  height: 300px;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.menu_items p {
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  font-size: 0.7em;
+}
+.total{
+  position: relative;
+
+}
+.sum{
+  text-align: left;
+  position: absolute;
+  bottom: -50px;
+  font-size: 0.7em;
+}
+hr.style14 {
+
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+.print{
+  display: flex;
+  margin-top: 100px;
+}
+.print button{
+  margin: auto;
+}
+/*****************************************************/
+/*********************printout************************/
+/*****************************************************/
+.plates_list{
+  display: flex;
+  flex-flow: row;
+}
+.plate_description{
+  flex: 1;
+  order: 1;
+  min-height: 50vh;
+  background: green;
+}
+.plate_description img{
+  float: left;
+  height: 250px;
+  width:250px;
+  margin: 20px;
+  border: 4px solid black;
+}
+.plate_description h1 , .plate_prep h4{
+  font-weight: bolder;
+  letter-spacing: 3px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.plate_description p{
+  width: 80%;
+  margin-left: 10px;
+}
+.plate_prep{
+  flex:1;
+  order: 2;
+  min-height: 50vh;
+  background: lightgrey;
+}
+#plan{
+  flex:3;
+  order: 2;
+}
+#overview_dinner{
+  order: 1;
+  flex: 1;
+}
+
+.plate_prep p{
+  width: 60%;
+  margin-left: 10px;
+}
+.planning{
+  flex:3;
+  order:2;
+  height:50vh;
+  display:flex;
+  flex-flow:row;
+}
+
+.plan_desc{
+  flex:3;
+  order: 1;
+  min-height: 90vh;
+  background: grey;
+  overflow-y: scroll;
+}
+.plan_desc h1{
+  font-weight: bolder;
+  margin-left: 50px;
+}
+.plan_desc img{
+  margin-left: 50px;
+  height: 250px;
+  width: 350px;
+}
+.plan_desc p{
+  font-size: 1em;
+  text-align: justify;
+  width: 90%;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.plan_desc button{
+  margin-left: 50px;
+}
+
+.plan_info{
+  flex:3;
+  order: 2;
+  min-height: 90vh;
+  background: #fce6cf;
+  position: relative;
+  overflow-y: scroll;
+}
+.plan_table{
+  width: 90%;
+  margin-left: 30px;
+
+}
+th, tr, td, thead, tbody, .table{
+  border: 1px solid #fce6cf;
+}
+.plan_info button{
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+.plan_info p{
+  position: absolute;
+  bottom: 50px;
+  right: 45px;
+}
+
+
+
+/*******************************************************/
+/*******************************************************/
+/*******************************************************/
+/**********************mobile***************************/
+/*******************************************************/
+/*******************************************************/
+/*******************************************************/
+@media only screen and (max-width : 768px) {
+
+
+/*first*/
+  header h1{
+    font-size: 3em;
+  }
+  /*second*/
+  .flex_container{
+    flex-flow: column;
+  }
+  .side{
+    min-height: 10vh;
+    padding-bottom: 70px;
+  }
+  .confirm{
+    top: 90%;
+    bottom: 0;
+  }
+  /*third*/
+  .short_info p {
+    font-size: 1.2em;
+  }
+  .dish_list{
+    flex-flow: column;
+    display: flex;
+  }
+  .dish_list > div {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+  .print{
+    margin-top: 0;
+  }
+  .vl{
+  display: none;
+  }
+  .plates_list{
+    flex-flow: column;
+  }
+  .planning{
+    flex-flow: column;
+  }
+  #btn{
+    display: block;
+  }
+
+}
+@media only screen and (max-width : 480px) {
+  .info{
+    display: flex;
+  }
+  .info > div{
+    margin: auto;
+  }
+}
